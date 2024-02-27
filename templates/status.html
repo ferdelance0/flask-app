@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Status</title>
+</head>
+<body>
+    <h1>Upload Status</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Filename</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pdf in uploaded_pdfs %}
+            <tr>
+                <td>{{ pdf.filename }}</td>
+                <td>{{ pdf.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
